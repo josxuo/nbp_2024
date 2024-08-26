@@ -1,207 +1,207 @@
-Park,Loop,Station,Latitude,Longitude,Near_phase_0,Near_phase_1,Near_phase_2,Near_phase_3,Near_phase_4
-Arboretum,Main - A,AM1,47.6379,-122.2933,n,n,n,n,n
-Arboretum,Main - A,AM2,47.6362,-122.2941,n,n,n,n,n
-Arboretum,Main - A,AM3,47.633,-122.2939,n,n,n,n,n
-Arboretum,Main - A,AM4,47.6318,-122.2932,n,n,n,n,n
-Arboretum,Main - A,AM5,47.6302,-122.2951,n,n,n,n,n
-Arboretum,Main - A,AM6,47.6316,-122.2951,n,n,n,n,n
-Arboretum,Main - A,AM7,47.6333,-122.2957,n,n,n,n,n
-Arboretum,Main - A,AM8,47.6349,-122.2963,n,n,n,n,n
-Arboretum,Main - A,AM9,47.6365,-122.2962,n,n,n,n,n
-Arboretum,Main - A,AM10,47.6381,-122.2959,n,n,n,n,n
-Carkeek,Piper's Creek,CP1,47.71,-122.3694,n,n,y,y,n
-Carkeek,Piper's Creek,CP2,47.7101,-122.3671,n,n,n,y,y
-Carkeek,Piper's Creek,CP3,47.7084,-122.3655,y,n,y,y,y
-Carkeek,Piper's Creek,CP4,47.7057,-122.3644,y,n,y,y,n
-Carkeek,Piper's Creek,CP5,47.7039,-122.3634,y,n,n,y,n
-Carkeek,Piper's Creek,CP6,47.7063,-122.3635,n,n,n,y,n
-Carkeek,Piper's Creek,CP7,47.7057,-122.3631,n,n,n,y,n
-Carkeek,Venema,CV1,47.711767,-122.369283,n,n,n,y,n
-Carkeek,Venema,CV2,47.711117,-122.371683,n,n,n,y,y
-Carkeek,Venema,CV3,47.71285,-122.370683,n,n,n,y,y
-Carkeek,Venema,CV4,47.712117,-122.374283,n,n,n,y,y
-Carkeek,Venema,CV5,47.71355,-122.375967,n,n,n,n,y
-Carkeek,Venema,CV6,47.713017,-122.378433,y,n,n,y,n
-Carkeek,Venema,CV7,47.712,-122.379083,n,y,n,n,n
-Carkeek,Venema,CV8,47.710483,-122.37925,n,n,n,y,n
-Carkeek,Venema,CV9,47.711283,-122.37635,n,y,n,y,n
-Discovery,Wolf Tree Nature Trail,DW1,47.6658,-122.41327,n,n,n,y,n
-Discovery,Wolf Tree Nature Trail,DW2,47.66583,-122.41125,n,n,n,y,y
-Discovery,Wolf Tree Nature Trail,DW3,47.66655,-122.41263,n,n,y,y,n
-Discovery,Wolf Tree Nature Trail,DW4,47.66707,-122.4151,n,n,y,y,n
-Discovery,Wolf Tree Nature Trail,DW5,47.66653,-122.41543,n,n,n,y,n
-Discovery,Wolf Tree Nature Trail,DW6,47.66667,-122.41367,n,n,y,y,n
-Discovery,Wolf Tree Nature Trail,DW7,47.66517,-122.41345,y,n,n,y,n
-Discovery,Beaches,DB1,47.659369,-122.428606,y,n,n,y,n
-Discovery,Beaches,DB2,47.660092,-122.430425,n,n,n,y,n
-Discovery,Beaches,DB3,47.661964,-122.435842,n,n,n,n,n
-Discovery,Beaches,DB4,47.662547,-122.431739,n,n,n,n,n
-Discovery,Beaches,DB5,47.662683,-122.430917,n,n,n,n,n
-Discovery,Beaches,DB6,47.664156,-122.427533,n,n,n,n,n
-Discovery,Beaches,DB7,47.666128,-122.423944,n,n,n,n,n
-Discovery,Capehart ,DCH1,47.660933,-122.42085,n,n,n,y,y
-Discovery,Capehart ,DCH2,47.660017,-122.42105,n,n,n,y,n
-Discovery,Capehart ,DCH3,47.65995,-122.423117,n,n,n,y,n
-Discovery,Capehart ,DCH4,47.661267,-122.423133,n,n,n,y,n
-Discovery,Capehart ,DCH5,47.660533,-122.422233,n,n,n,y,n
-Discovery,Cemetery,DCM1,47.659683,-122.405233,n,n,n,y,n
-Discovery,Cemetery,DCM2,47.660633,-122.40555,n,n,n,n,n
-Discovery,Cemetery,DCM3,47.661283,-122.4065,n,n,n,y,n
-Discovery,Cemetery,DCM4,47.661267,-122.40655,n,n,n,y,n
-Discovery,Cemetery,DCM5,47.664533,-122.409,y,n,n,y,n
-Discovery,Cemetery,DCM6,47.663617,-122.408517,n,n,n,y,n
-Discovery,Cemetery,DCM7,47.664533,-122.409,y,n,n,y,n
-Discovery,Cemetery,DCM8,47.664517,-122.409017,y,n,n,y,n
-Discovery,Daybreak Star,DD1,47.665433,-122.410333,y,y,y,y,y
-Discovery,Daybreak Star,DD2,47.66765,-122.41295,y,n,y,y,n
-Discovery,Daybreak Star,DD3,47.668217,-122.415283,n,y,n,y,n
-Discovery,Daybreak Star,DD4,47.666603,-122.41735,y,n,n,y,n
-Discovery,Daybreak Star,DD5,47.66505,-122.41955,n,n,n,y,y
-Discovery,Daybreak Star,DD6,47.663617,-122.42095,y,n,y,y,n
-Discovery,Daybreak Star,DD7,47.661283,-122.4185,n,y,y,n,n
-Discovery,Daybreak Star,DD8,47.664283,-122.417383,n,n,n,y,y
-Discovery,Eastern Edge,DE1,47.6578,-122.4045,y,n,y,y,n
-Discovery,Eastern Edge,DE2,47.657,-122.404,n,n,n,y,y
-Discovery,Eastern Edge,DE3,47.6562,-122.4041,n,n,y,y,y
-Discovery,Eastern Edge,DE4,47.6551,-122.4039,n,n,y,y,y
-Discovery,Eastern Edge,DE5,47.6542,-122.4045,n,n,n,y,y
-Discovery,Eastern Edge,DE6,47.6541,-122.4068,y,n,n,y,n
-Discovery,Eastern Edge,DE7,47.6545,-122.4083,n,n,y,y,n
-Discovery,Eastern Edge,DE8,47.6555,-122.4091,n,n,n,y,n
-Discovery,Eastern Edge,DE9,47.6545,-122.4115,y,n,n,y,n
-Discovery,Hidden Valley Trail,DH1,47.6621,-122.4226,n,n,y,y,y
-Discovery,Hidden Valley Trail,DH2,47.663467,-122.421883,y,n,y,y,y
-Discovery,Hidden Valley Trail,DH3,47.66605,-122.421233,n,y,n,y,n
-Discovery,Hidden Valley Trail,DH4,47.664417,-122.4224,y,n,n,y,n
-Discovery,Hidden Valley Trail,DH5,47.663233,-122.425117,n,n,n,y,y
-Discovery,Hidden Valley Trail,DH6,47.660883,-122.42675,n,n,n,n,y
-Discovery,Hidden Valley Trail,DH7,47.661633,-122.4275,n,n,n,n,y
-Discovery,Hidden Valley Trail,DH8,47.6609,-122.428317,n,n,n,n,y
-Discovery,Nike/500,DNI1,47.65652,-122.41035,n,n,y,y,n
-Discovery,Nike/500,DNI2,47.65797,-122.41033,n,n,n,y,n
-Discovery,Nike/500,DNI3,47.65875,-122.41167,n,y,n,y,n
-Discovery,Nike/500,DNI4,47.65693,-122.41151,n,n,n,y,n
-Discovery,North Beach Trail,DNB1,47.665983,-122.4216,n,n,n,y,n
-Discovery,North Beach Trail,DNB2,47.665917,-122.4221,n,n,n,y,n
-Discovery,North Beach Trail,DNB3,47.666283,-122.422333,n,y,n,y,n
-Discovery,North Beach Trail,DNB4,47.666867,-122.421567,n,y,n,y,n
-Discovery,North Beach Trail,DNB5,47.66735,-122.4226,n,n,n,n,n
-Discovery,North Loop Trail,DNL1,47.65855,-122.40625,n,n,y,n,y
-Discovery,North Loop Trail,DNL2,47.661033,-122.407467,n,n,n,y,n
-Discovery,North Loop Trail,DNL3,47.662583,-122.410167,n,n,y,y,n
-Discovery,North Loop Trail,DNL4,47.663583,-122.41365,n,n,y,y,y
-Discovery,North Loop Trail,DNL5,47.663617,-122.4162,n,n,n,n,y
-Discovery,North Loop Trail,DNL6,47.662633,-122.416417,n,y,n,y,y
-Discovery,North Loop Trail,DNL7,47.660583,-122.414833,n,n,n,y,n
-Discovery,North Loop Trail,DNL8,47.661267,-122.412117,n,n,n,n,y
-Discovery,North Loop Trail,DNL9,47.660367,-122.409033,n,n,y,y,y
-Discovery,South Beach Trail,DSB1,47.661533,-122.423983,n,n,n,y,y
-Discovery,South Beach Trail,DSB2,47.6594,-122.42405,n,n,n,y,y
-Discovery,South Beach Trail,DSB3,47.658333,-122.424267,y,n,n,y,n
-Discovery,South Beach Trail,DSB4,47.659417,-122.426333,y,n,n,y,n
-Discovery,South Beach Trail,DSB5,47.660283,-122.426133,n,n,n,y,y
-Discovery,South Beach Trail,DSB6,47.659683,-122.4287,y,n,n,y,n
-Discovery,South Beach Trail,DSB7,47.66015,-122.42965,n,n,n,y,n
-Discovery,South Loop Trail,DSL1,47.657778,-122.405944,n,n,y,y,n
-Discovery,South Loop Trail,DSL10,47.658667,-122.407972,n,n,n,n,y
-Discovery,South Loop Trail,DSL2,47.656167,-122.406056,y,n,n,n,y
-Discovery,South Loop Trail,DSL3,47.655389,-122.408167,y,n,y,y,n
-Discovery,South Loop Trail,DSL4,47.656917,-122.408722,n,y,n,y,y
-Discovery,South Loop Trail,DSL5,47.657361,-122.409889,n,n,n,y,n
-Discovery,South Loop Trail,DSL6,47.655556,-122.410833,n,n,n,y,n
-Discovery,South Loop Trail,DSL7,47.657667,-122.413861,n,n,n,n,n
-Discovery,South Loop Trail,DSL8,47.660083,-122.413028,n,n,n,y,y
-Discovery,South Loop Trail,DSL9,47.659806,-122.40925,n,n,n,y,y
-Discovery,South Meadow,DSM1,47.65465,-122.413467,n,n,y,y,n
-Discovery,South Meadow,DSM2,47.656233,-122.4164,n,n,n,y,n
-Discovery,South Meadow,DSM3,47.658483,-122.417067,n,n,n,y,n
-Discovery,South Meadow,DSM4,47.6595,-122.418317,y,y,n,y,n
-Discovery,South Meadow,DSM5,47.658183,-122.420233,y,n,n,y,n
-Discovery,South Meadow,DSM6,47.657967,-122.423117,n,n,n,y,n
-Discovery,South Meadow,DSM7,47.65685,-122.420567,y,n,y,y,n
-Discovery,South Meadow,DSM8,47.655083,-122.41885,y,y,n,y,n
-Discovery,South Meadow,DSM9,47.654567,-122.415217,n,n,y,y,n
-Genesee,Main - Gen,GEM1,47.56955,-122.278333,n,n,n,n,n
-Genesee,Main - Gen,GEM2,47.56885,-122.27805,n,y,n,n,n
-Genesee,Main - Gen,GEM3,47.567533,-122.278567,y,n,n,y,n
-Genesee,Main - Gen,GEM4,47.566983,-122.277717,y,n,n,y,n
-Genesee,Main - Gen,GEM5,47.566417,-122.27685,y,n,n,y,n
-Genesee,Main - Gen,GEM6,47.568017,-122.277167,y,n,y,y,n
-Genesee,Main - Gen,GEM7,47.570483,-122.276383,n,n,n,n,n
-Golden Gardens,Main - GG,GGM1,47.69015,-122.400067,y,n,y,y,n
-Golden Gardens,Main - GG,GGM2,47.69205,-122.401417,n,n,n,y,n
-Golden Gardens,Main - GG,GGM3,47.687183,-122.404467,n,n,n,n,n
-Golden Gardens,Main - GG,GGM4,47.689133,-122.403233,n,n,n,n,n
-Golden Gardens,Main - GG,GGM5,47.692767,-122.404617,y,y,n,y,n
-Golden Gardens,Main - GG,GGM6,47.69415,-122.40455,n,n,n,y,n
-Lake Forest,Main - GG,LFM1,47.752517,-122.275183,n,n,n,n,n
-Lake Forest,Main - GG,LFM2,47.753017,-122.275883,n,n,n,n,n
-Lincoln,North,LN1,47.530567,-122.393283,n,n,n,y,n
-Lincoln,North,LN2,47.532267,-122.394433,n,n,n,y,y
-Lincoln,North,LN3,47.532133,-122.397333,n,y,n,y,y
-Lincoln,North,LN4,47.533517,-122.396183,n,y,n,n,n
-Lincoln,North,LN5,47.534217,-122.393533,n,n,n,y,y
-Lincoln,North,LN6,47.536,-122.39385,n,n,n,y,n
-Lincoln,South,LS1,47.5291,-122.39455,n,n,n,y,n
-Lincoln,South,LS2,47.527167,-122.3936,n,n,n,n,n
-Lincoln,South,LS3,47.528533,-122.3974,n,y,n,y,n
-Lincoln,South,LS4,47.530383,-122.398483,n,y,n,y,n
-Lincoln,South,LS5,47.530533,-122.3962,n,n,n,y,y
-Magnuson,Waterfront,MWF1,47.6758,-122.2514,n,n,n,n,n
-Magnuson,Waterfront,MWF2,47.6738,-122.2517,y,y,y,y,n
-Magnuson,Waterfront,MWF3,47.6753,-122.2502,y,n,n,n,n
-Magnuson,Waterfront,MWF4,47.6768,-122.2496,y,n,n,n,n
-Magnuson,Waterfront,MWF5,47.6784,-122.2484,y,n,n,n,n
-Magnuson,Waterfront,MWF6,47.6805,-122.2466,n,n,n,n,n
-Magnuson,Waterfront,MWF7,47.682,-122.2457,y,n,n,n,n
-Magnuson,Waterfront,MWF8,47.6856,-122.2483,y,n,n,n,n
-Magnuson,Main Drag,MM1,47.6774,-122.2502,y,n,n,y,n
-Magnuson,Main Drag,MM2,47.681,-122.2472,y,n,n,n,n
-Magnuson,Main Drag,MM3,47.684,-122.2485,y,n,y,n,n
-Magnuson,Main Drag,MM4,47.6813,-122.2496,y,n,y,y,n
-Magnuson,Main Drag,MM5,47.6798,-122.2501,y,n,n,n,n
-Magnuson,Back Fence,MB1,47.6832,-122.2499,y,n,n,y,n
-Magnuson,Back Fence,MB2,47.6824,-122.2522,y,n,n,y,n
-Magnuson,Back Fence,MB3,47.6831,-122.2556,y,y,n,y,n
-Magnuson,Back Fence,MB4,47.6806,-122.2554,y,n,n,n,n
-Magnuson,Back Fence,MB5,47.679,-122.258,n,n,y,n,n
-Magnuson,Back Fence,MB6,47.6797,-122.2547,y,n,y,y,n
-Magnuson,South End,MS1,47.6786,-122.254,n,n,y,n,n
-Magnuson,South End,MS2,47.6751,-122.2538,y,n,y,y,n
-Magnuson,South End,MS3,47.674,-122.2533,n,n,n,y,n
-Magnuson,South End,MS4,47.6737,-122.2557,n,n,y,y,y
-Magnuson,South End,MS5,47.6747,-122.257,n,n,y,n,n
-Magnuson,Wetland,MWL1,47.678,-122.251,y,y,n,y,n
-Magnuson,Wetland,MWL2,47.6785,-122.2565,n,y,y,y,n
-Magnuson,Wetland,MWL3,47.6768,-122.2584,n,n,y,y,n
-Magnuson,Wetland,MWL4,47.6806,-122.2567,y,n,n,n,n
-Seward,West,SW1,47.5517,-122.2545,n,n,n,n,n
-Seward,West,SW2,47.5518,-122.2571,n,n,n,y,y
-Seward,West,SW3,47.5541,-122.2541,n,n,n,y,y
-Seward,West,SW4,47.5608,-122.2553,n,n,n,y,y
-Seward,West,SW5,47.5595,-122.2518,n,n,n,n,y
-Seward,West,SW6,47.5561,-122.2524,n,n,n,n,y
-Seward,West,SW7,47.5539,-122.2512,n,n,n,n,y
-Seward,West,SW8,47.5517,-122.2525,n,n,n,y,y
-Seward,East,SE1,47.552617,-122.2517,n,n,n,y,y
-Seward,East,SE2,47.55533,-122.24995,n,n,n,y,n
-Seward,East,SE3,47.557267,-122.251,n,n,n,y,y
-Seward,East,SE4,47.559517,-122.250133,n,n,n,y,y
-Seward,East,SE5,47.561567,-122.253267,n,n,n,y,y
-Seward,East,SE6,47.557393,-122.247784,n,y,n,y,n
-Seward,East,SE7,47.549367,-122.252917,n,n,n,n,y
-Seward,East,SE8,47.550133,-122.25475,y,n,n,y,n
-Cheasty Greenspace,North,CGN1,47.564201,-122.298681,n,y,n,n,n
-Cheasty Greenspace,North,CGN2,47.564661,-122.299379,y,y,n,y,n
-Cheasty Greenspace,North,CGN3,47.565214,-122.299686,y,y,n,y,n
-Cheasty Greenspace,North,CGN4,47.566112,-122.299702,y,n,n,y,n
-Cheasty Greenspace,North,CGN5,47.568122,-122.29927,y,y,n,y,n
-Cheasty Greenspace,North,CGN6,47.563659,-122.301133,y,y,n,y,n
-Cheasty Greenspace,North,CGN7,47.563636,-122.299937,y,y,n,y,n
-Cheasty Greenspace,South,CGS1,47.561994,-122.301412,n,n,n,y,n
-Cheasty Greenspace,South,CGS2,47.56199,-122.300426,n,n,y,y,n
-Cheasty Greenspace,South,CGS3,47.561839,-122.299566,n,n,y,y,n
-Cheasty Greenspace,South,CGS4,47.561931,-122.298734,y,n,y,y,n
-Cheasty Greenspace,South,CGS5,47.562576,-122.299779,y,n,y,y,n
-Cheasty Greenspace,South,CGS6,47.561555,-122.30049,n,n,n,y,n
-Cheasty Greenspace,South,CGS7,47.561342,-122.301047,n,n,y,y,n
+park,loop,station,code,latitude,longitude,near_phase_0,near_phase_1,near_phase_2,near_phase_3,near_phase_4
+Magnuson Park,Back Fence Loop,1,MB1,47.6832,-122.2499,y,n,n,y,n
+Magnuson Park,Back Fence Loop,2,MB2,47.6824,-122.2522,y,n,n,y,n
+Magnuson Park,Back Fence Loop,3,MB3,47.6831,-122.2556,y,y,n,y,n
+Magnuson Park,Back Fence Loop,4,MB4,47.6806,-122.2554,y,n,n,n,n
+Magnuson Park,Back Fence Loop,5,MB5,47.679,-122.258,n,n,y,n,n
+Magnuson Park,Back Fence Loop,6,MB6,47.6797,-122.2547,y,n,y,y,n
+Discovery Park,Beaches,1,DB1,47.659369,-122.428606,y,n,n,y,n
+Discovery Park,Beaches,2,DB2,47.660092,-122.430425,n,n,n,y,n
+Discovery Park,Beaches,3,DB3,47.661964,-122.435842,n,n,n,n,n
+Discovery Park,Beaches,4,DB4,47.662547,-122.431739,n,n,n,n,n
+Discovery Park,Beaches,5,DB5,47.662683,-122.430917,n,n,n,n,n
+Discovery Park,Beaches,6,DB6,47.664156,-122.427533,n,n,n,n,n
+Discovery Park,Beaches,7,DB7,47.666128,-122.423944,n,n,n,n,n
+Discovery Park,Capehart ,1,DCH1,47.660933,-122.42085,n,n,n,y,y
+Discovery Park,Capehart ,2,DCH2,47.660017,-122.42105,n,n,n,y,n
+Discovery Park,Capehart ,3,DCH3,47.65995,-122.423117,n,n,n,y,n
+Discovery Park,Capehart ,4,DCH4,47.661267,-122.423133,n,n,n,y,n
+Discovery Park,Capehart ,5,DCH5,47.660533,-122.422233,n,n,n,y,n
+Discovery Park,Cemetery,1,DCM1,47.659683,-122.405233,n,n,n,y,n
+Discovery Park,Cemetery,2,DCM2,47.660633,-122.40555,n,n,n,n,n
+Discovery Park,Cemetery,3,DCM3,47.661283,-122.4065,n,n,n,y,n
+Discovery Park,Cemetery,4,DCM4,47.661267,-122.40655,n,n,n,y,n
+Discovery Park,Cemetery,5,DCM5,47.664533,-122.409,y,n,n,y,n
+Discovery Park,Cemetery,6,DCM6,47.663617,-122.408517,n,n,n,y,n
+Discovery Park,Cemetery,7,DCM7,47.664533,-122.409,y,n,n,y,n
+Discovery Park,Cemetery,8,DCM8,47.664517,-122.409017,y,n,n,y,n
+Discovery Park,Daybreak Star,1,DD1,47.665433,-122.410333,y,y,y,y,y
+Discovery Park,Daybreak Star,2,DD2,47.66765,-122.41295,y,n,y,y,n
+Discovery Park,Daybreak Star,3,DD3,47.668217,-122.415283,n,y,n,y,n
+Discovery Park,Daybreak Star,4,DD4,47.666603,-122.41735,y,n,n,y,n
+Discovery Park,Daybreak Star,5,DD5,47.66505,-122.41955,n,n,n,y,y
+Discovery Park,Daybreak Star,6,DD6,47.663617,-122.42095,y,n,y,y,n
+Discovery Park,Daybreak Star,7,DD7,47.661283,-122.4185,n,y,y,n,n
+Discovery Park,Daybreak Star,8,DD8,47.664283,-122.417383,n,n,n,y,y
+Seward Park,East Loop,1,SE1,47.552617,-122.2517,n,n,n,y,y
+Seward Park,East Loop,2,SE2,47.55533,-122.24995,n,n,n,y,n
+Seward Park,East Loop,3,SE3,47.557267,-122.251,n,n,n,y,y
+Seward Park,East Loop,4,SE4,47.559517,-122.250133,n,n,n,y,y
+Seward Park,East Loop,5,SE5,47.561567,-122.253267,n,n,n,y,y
+Seward Park,East Loop,6,SE6,47.557393,-122.247784,n,y,n,y,n
+Seward Park,East Loop,7,SE7,47.549367,-122.252917,n,n,n,n,y
+Seward Park,East Loop,8,SE8,47.550133,-122.25475,y,n,n,y,n
+Discovery Park,Eastern Edge,1,DE1,47.6578,-122.4045,y,n,y,y,n
+Discovery Park,Eastern Edge,2,DE2,47.657,-122.404,n,n,n,y,y
+Discovery Park,Eastern Edge,3,DE3,47.6562,-122.4041,n,n,y,y,y
+Discovery Park,Eastern Edge,4,DE4,47.6551,-122.4039,n,n,y,y,y
+Discovery Park,Eastern Edge,5,DE5,47.6542,-122.4045,n,n,n,y,y
+Discovery Park,Eastern Edge,6,DE6,47.6541,-122.4068,y,n,n,y,n
+Discovery Park,Eastern Edge,7,DE7,47.6545,-122.4083,n,n,y,y,n
+Discovery Park,Eastern Edge,8,DE8,47.6555,-122.4091,n,n,n,y,n
+Discovery Park,Eastern Edge,9,DE9,47.6545,-122.4115,y,n,n,y,n
+Discovery Park,Hidden Valley Trail,1,DH1,47.6621,-122.4226,n,n,y,y,y
+Discovery Park,Hidden Valley Trail,2,DH2,47.663467,-122.421883,y,n,y,y,y
+Discovery Park,Hidden Valley Trail,3,DH3,47.66605,-122.421233,n,y,n,y,n
+Discovery Park,Hidden Valley Trail,4,DH4,47.664417,-122.4224,y,n,n,y,n
+Discovery Park,Hidden Valley Trail,5,DH5,47.663233,-122.425117,n,n,n,y,y
+Discovery Park,Hidden Valley Trail,6,DH6,47.660883,-122.42675,n,n,n,n,y
+Discovery Park,Hidden Valley Trail,7,DH7,47.661633,-122.4275,n,n,n,n,y
+Discovery Park,Hidden Valley Trail,8,DH8,47.6609,-122.428317,n,n,n,n,y
+Washington Park Arboretum,Main Loop,1,AM1,47.6379,-122.2933,n,n,n,n,n
+Washington Park Arboretum,Main Loop,2,AM2,47.6362,-122.2941,n,n,n,n,n
+Washington Park Arboretum,Main Loop,3,AM3,47.633,-122.2939,n,n,n,n,n
+Washington Park Arboretum,Main Loop,4,AM4,47.6318,-122.2932,n,n,n,n,n
+Washington Park Arboretum,Main Loop,5,AM5,47.6302,-122.2951,n,n,n,n,n
+Washington Park Arboretum,Main Loop,6,AM6,47.6316,-122.2951,n,n,n,n,n
+Washington Park Arboretum,Main Loop,7,AM7,47.6333,-122.2957,n,n,n,n,n
+Washington Park Arboretum,Main Loop,8,AM8,47.6349,-122.2963,n,n,n,n,n
+Washington Park Arboretum,Main Loop,9,AM9,47.6365,-122.2962,n,n,n,n,n
+Washington Park Arboretum,Main Loop,10,AM10,47.6381,-122.2959,n,n,n,n,n
+Genesee Park,Main Loop,1,GEM1,47.56955,-122.278333,n,n,n,n,n
+Genesee Park,Main Loop,2,GEM2,47.56885,-122.27805,n,y,n,n,n
+Genesee Park,Main Loop,3,GEM3,47.567533,-122.278567,y,n,n,y,n
+Genesee Park,Main Loop,4,GEM4,47.566983,-122.277717,y,n,n,y,n
+Genesee Park,Main Loop,5,GEM5,47.566417,-122.27685,y,n,n,y,n
+Genesee Park,Main Loop,6,GEM6,47.568017,-122.277167,y,n,y,y,n
+Genesee Park,Main Loop,7,GEM7,47.570483,-122.276383,n,n,n,n,n
+Golden Gardens,Main Loop,1,GGM1,47.69015,-122.400067,y,n,y,y,n
+Golden Gardens,Main Loop,2,GGM2,47.69205,-122.401417,n,n,n,y,n
+Golden Gardens,Main Loop,3,GGM3,47.687183,-122.404467,n,n,n,n,n
+Golden Gardens,Main Loop,4,GGM4,47.689133,-122.403233,n,n,n,n,n
+Golden Gardens,Main Loop,5,GGM5,47.692767,-122.404617,y,y,n,y,n
+Golden Gardens,Main Loop,6,GGM6,47.69415,-122.40455,n,n,n,y,n
+Lake Forest Park,Main Loop,1,LFM1,47.752517,-122.275183,n,n,n,n,n
+Lake Forest Park,Main Loop,2,LFM2,47.753017,-122.275883,n,n,n,n,n
+Magnuson Park,Main Drag Loop,1,MM1,47.6774,-122.2502,y,n,n,y,n
+Magnuson Park,Main Drag Loop,2,MM2,47.681,-122.2472,y,n,n,n,n
+Magnuson Park,Main Drag Loop,3,MM3,47.684,-122.2485,y,n,y,n,n
+Magnuson Park,Main Drag Loop,4,MM4,47.6813,-122.2496,y,n,y,y,n
+Magnuson Park,Main Drag Loop,5,MM5,47.6798,-122.2501,y,n,n,n,n
+Discovery Park,Nike/500,1,DNI1,47.65652,-122.41035,n,n,y,y,n
+Discovery Park,Nike/500,2,DNI2,47.65797,-122.41033,n,n,n,y,n
+Discovery Park,Nike/500,3,DNI3,47.65875,-122.41167,n,y,n,y,n
+Discovery Park,Nike/500,4,DNI4,47.65693,-122.41151,n,n,n,y,n
+Lincoln Park,North,1,LN1,47.530567,-122.393283,n,n,n,y,n
+Lincoln Park,North,2,LN2,47.532267,-122.394433,n,n,n,y,y
+Lincoln Park,North,3,LN3,47.532133,-122.397333,n,y,n,y,y
+Lincoln Park,North,4,LN4,47.533517,-122.396183,n,y,n,n,n
+Lincoln Park,North,5,LN5,47.534217,-122.393533,n,n,n,y,y
+Lincoln Park,North,6,LN6,47.536,-122.39385,n,n,n,y,n
+Cheasty Greenspace,North,1,CGN1,47.564201,-122.298681,n,y,n,n,n
+Cheasty Greenspace,North,2,CGN2,47.564661,-122.299379,y,y,n,y,n
+Cheasty Greenspace,North,3,CGN3,47.565214,-122.299686,y,y,n,y,n
+Cheasty Greenspace,North,4,CGN4,47.566112,-122.299702,y,n,n,y,n
+Cheasty Greenspace,North,5,CGN5,47.568122,-122.29927,y,y,n,y,n
+Cheasty Greenspace,North,6,CGN6,47.563659,-122.301133,y,y,n,y,n
+Cheasty Greenspace,North,7,CGN7,47.563636,-122.299937,y,y,n,y,n
+Discovery Park,North Beach Trail,1,DNB1,47.665983,-122.4216,n,n,n,y,n
+Discovery Park,North Beach Trail,2,DNB2,47.665917,-122.4221,n,n,n,y,n
+Discovery Park,North Beach Trail,3,DNB3,47.666283,-122.422333,n,y,n,y,n
+Discovery Park,North Beach Trail,4,DNB4,47.666867,-122.421567,n,y,n,y,n
+Discovery Park,North Beach Trail,5,DNB5,47.66735,-122.4226,n,n,n,n,n
+Discovery Park,North Loop Trail,1,DNL1,47.65855,-122.40625,n,n,y,n,y
+Discovery Park,North Loop Trail,2,DNL2,47.661033,-122.407467,n,n,n,y,n
+Discovery Park,North Loop Trail,3,DNL3,47.662583,-122.410167,n,n,y,y,n
+Discovery Park,North Loop Trail,4,DNL4,47.663583,-122.41365,n,n,y,y,y
+Discovery Park,North Loop Trail,5,DNL5,47.663617,-122.4162,n,n,n,n,y
+Discovery Park,North Loop Trail,6,DNL6,47.662633,-122.416417,n,y,n,y,y
+Discovery Park,North Loop Trail,7,DNL7,47.660583,-122.414833,n,n,n,y,n
+Discovery Park,North Loop Trail,8,DNL8,47.661267,-122.412117,n,n,n,n,y
+Discovery Park,North Loop Trail,9,DNL9,47.660367,-122.409033,n,n,y,y,y
+Carkeek Park,Pipers Creek Loop,1,CP1,47.71,-122.3694,n,n,y,y,n
+Carkeek Park,Pipers Creek Loop,2,CP2,47.7101,-122.3671,n,n,n,y,y
+Carkeek Park,Pipers Creek Loop,3,CP3,47.7084,-122.3655,y,n,y,y,y
+Carkeek Park,Pipers Creek Loop,4,CP4,47.7057,-122.3644,y,n,y,y,n
+Carkeek Park,Pipers Creek Loop,5,CP5,47.7039,-122.3634,y,n,n,y,n
+Carkeek Park,Pipers Creek Loop,6,CP6,47.7063,-122.3635,n,n,n,y,n
+Carkeek Park,Pipers Creek Loop,7,CP7,47.7057,-122.3631,n,n,n,y,n
+Lincoln Park,South,1,LS1,47.5291,-122.39455,n,n,n,y,n
+Lincoln Park,South,2,LS2,47.527167,-122.3936,n,n,n,n,n
+Lincoln Park,South,3,LS3,47.528533,-122.3974,n,y,n,y,n
+Lincoln Park,South,4,LS4,47.530383,-122.398483,n,y,n,y,n
+Lincoln Park,South,5,LS5,47.530533,-122.3962,n,n,n,y,y
+Cheasty Greenspace,South,1,CGS1,47.561994,-122.301412,n,n,n,y,n
+Cheasty Greenspace,South,2,CGS2,47.56199,-122.300426,n,n,y,y,n
+Cheasty Greenspace,South,3,CGS3,47.561839,-122.299566,n,n,y,y,n
+Cheasty Greenspace,South,4,CGS4,47.561931,-122.298734,y,n,y,y,n
+Cheasty Greenspace,South,5,CGS5,47.562576,-122.299779,y,n,y,y,n
+Cheasty Greenspace,South,6,CGS6,47.561555,-122.30049,n,n,n,y,n
+Cheasty Greenspace,South,7,CGS7,47.561342,-122.301047,n,n,y,y,n
+Discovery Park,South Beach Trail,1,DSB1,47.661533,-122.423983,n,n,n,y,y
+Discovery Park,South Beach Trail,2,DSB2,47.6594,-122.42405,n,n,n,y,y
+Discovery Park,South Beach Trail,3,DSB3,47.658333,-122.424267,y,n,n,y,n
+Discovery Park,South Beach Trail,4,DSB4,47.659417,-122.426333,y,n,n,y,n
+Discovery Park,South Beach Trail,5,DSB5,47.660283,-122.426133,n,n,n,y,y
+Discovery Park,South Beach Trail,6,DSB6,47.659683,-122.4287,y,n,n,y,n
+Discovery Park,South Beach Trail,7,DSB7,47.66015,-122.42965,n,n,n,y,n
+Magnuson Park,South End Loop,1,MS1,47.6786,-122.254,n,n,y,n,n
+Magnuson Park,South End Loop,2,MS2,47.6751,-122.2538,y,n,y,y,n
+Magnuson Park,South End Loop,3,MS3,47.674,-122.2533,n,n,n,y,n
+Magnuson Park,South End Loop,4,MS4,47.6737,-122.2557,n,n,y,y,y
+Magnuson Park,South End Loop,5,MS5,47.6747,-122.257,n,n,y,n,n
+Discovery Park,South Loop Trail,1,DSL1,47.657778,-122.405944,n,n,y,y,n
+Discovery Park,South Loop Trail,10,DSL10,47.658667,-122.407972,n,n,n,n,y
+Discovery Park,South Loop Trail,2,DSL2,47.656167,-122.406056,y,n,n,n,y
+Discovery Park,South Loop Trail,3,DSL3,47.655389,-122.408167,y,n,y,y,n
+Discovery Park,South Loop Trail,4,DSL4,47.656917,-122.408722,n,y,n,y,y
+Discovery Park,South Loop Trail,5,DSL5,47.657361,-122.409889,n,n,n,y,n
+Discovery Park,South Loop Trail,6,DSL6,47.655556,-122.410833,n,n,n,y,n
+Discovery Park,South Loop Trail,7,DSL7,47.657667,-122.413861,n,n,n,n,n
+Discovery Park,South Loop Trail,8,DSL8,47.660083,-122.413028,n,n,n,y,y
+Discovery Park,South Loop Trail,9,DSL9,47.659806,-122.40925,n,n,n,y,y
+Discovery Park,South Meadow,1,DSM1,47.65465,-122.413467,n,n,y,y,n
+Discovery Park,South Meadow,2,DSM2,47.656233,-122.4164,n,n,n,y,n
+Discovery Park,South Meadow,3,DSM3,47.658483,-122.417067,n,n,n,y,n
+Discovery Park,South Meadow,4,DSM4,47.6595,-122.418317,y,y,n,y,n
+Discovery Park,South Meadow,5,DSM5,47.658183,-122.420233,y,n,n,y,n
+Discovery Park,South Meadow,6,DSM6,47.657967,-122.423117,n,n,n,y,n
+Discovery Park,South Meadow,7,DSM7,47.65685,-122.420567,y,n,y,y,n
+Discovery Park,South Meadow,8,DSM8,47.655083,-122.41885,y,y,n,y,n
+Discovery Park,South Meadow,9,DSM9,47.654567,-122.415217,n,n,y,y,n
+Carkeek Park,Venema Meadow Loop,1,CV1,47.711767,-122.369283,n,n,n,y,n
+Carkeek Park,Venema Meadow Loop,2,CV2,47.711117,-122.371683,n,n,n,y,y
+Carkeek Park,Venema Meadow Loop,3,CV3,47.71285,-122.370683,n,n,n,y,y
+Carkeek Park,Venema Meadow Loop,4,CV4,47.712117,-122.374283,n,n,n,y,y
+Carkeek Park,Venema Meadow Loop,5,CV5,47.71355,-122.375967,n,n,n,n,y
+Carkeek Park,Venema Meadow Loop,6,CV6,47.713017,-122.378433,y,n,n,y,n
+Carkeek Park,Venema Meadow Loop,7,CV7,47.712,-122.379083,n,y,n,n,n
+Carkeek Park,Venema Meadow Loop,8,CV8,47.710483,-122.37925,n,n,n,y,n
+Carkeek Park,Venema Meadow Loop,9,CV9,47.711283,-122.37635,n,y,n,y,n
+Magnuson Park,Waterfront Loop,1,MWF1,47.6758,-122.2514,n,n,n,n,n
+Magnuson Park,Waterfront Loop,2,MWF2,47.6738,-122.2517,y,y,y,y,n
+Magnuson Park,Waterfront Loop,3,MWF3,47.6753,-122.2502,y,n,n,n,n
+Magnuson Park,Waterfront Loop,4,MWF4,47.6768,-122.2496,y,n,n,n,n
+Magnuson Park,Waterfront Loop,5,MWF5,47.6784,-122.2484,y,n,n,n,n
+Magnuson Park,Waterfront Loop,6,MWF6,47.6805,-122.2466,n,n,n,n,n
+Magnuson Park,Waterfront Loop,7,MWF7,47.682,-122.2457,y,n,n,n,n
+Magnuson Park,Waterfront Loop,8,MWF8,47.6856,-122.2483,y,n,n,n,n
+Seward Park,West Loop,1,SW1,47.5517,-122.2545,n,n,n,n,n
+Seward Park,West Loop,2,SW2,47.5518,-122.2571,n,n,n,y,y
+Seward Park,West Loop,3,SW3,47.5541,-122.2541,n,n,n,y,y
+Seward Park,West Loop,4,SW4,47.5608,-122.2553,n,n,n,y,y
+Seward Park,West Loop,5,SW5,47.5595,-122.2518,n,n,n,n,y
+Seward Park,West Loop,6,SW6,47.5561,-122.2524,n,n,n,n,y
+Seward Park,West Loop,7,SW7,47.5539,-122.2512,n,n,n,n,y
+Seward Park,West Loop,8,SW8,47.5517,-122.2525,n,n,n,y,y
+Magnuson Park,Wetland Loop,1,MWL1,47.678,-122.251,y,y,n,y,n
+Magnuson Park,Wetland Loop,2,MWL2,47.6785,-122.2565,n,y,y,y,n
+Magnuson Park,Wetland Loop,3,MWL3,47.6768,-122.2584,n,n,y,y,n
+Magnuson Park,Wetland Loop,4,MWL4,47.6806,-122.2567,y,n,n,n,n
+Discovery Park,Wolf Tree Nature Trail,1,DW1,47.6658,-122.41327,n,n,n,y,n
+Discovery Park,Wolf Tree Nature Trail,2,DW2,47.66583,-122.41125,n,n,n,y,y
+Discovery Park,Wolf Tree Nature Trail,3,DW3,47.66655,-122.41263,n,n,y,y,n
+Discovery Park,Wolf Tree Nature Trail,4,DW4,47.66707,-122.4151,n,n,y,y,n
+Discovery Park,Wolf Tree Nature Trail,5,DW5,47.66653,-122.41543,n,n,n,y,n
+Discovery Park,Wolf Tree Nature Trail,6,DW6,47.66667,-122.41367,n,n,y,y,n
+Discovery Park,Wolf Tree Nature Trail,7,DW7,47.66517,-122.41345,y,n,n,y,n
