@@ -1,0 +1,473 @@
+
+
+************************ Importing .xlsx Format File *************************
+PC-ORD, 7.11
+24 Sep 2024, 7:26:29
+
+     Import file: C:\Users\joshu\01_MyFiles\03_Professional\nbp_2024\data\c_analysis_data\covs_2019&2023_hrcd.xlsx
+
+     Excel Simple Spreadsheet format
+
+****************************** Import completed ******************************
+24 Sep 2024, 7:26:29
+
+
+****************************** Data Modification ******************************
+PC-ORD, 7.11                
+24 Sep 2024,  7:26:45
+
+ Project file: C:\Users\joshu\01_MyFiles\03_Professional\nbp_2024\results\hrcd.7prj
+  Main matrix: C:\Users\joshu\AppData\Roaming\MjM Software Design\PCORD 7\WORK.MJM
+
+      RELATIVIZATION BY MAXIMUM FOR EACH         ROW 
+
+***************************** Operation completed *****************************
+24 Sep 2024,  7:26:45
+
+******************** Permutation based MANOVA (PerMANOVA) ********************
+PC-ORD, 7.11                
+24 Sep 2024,  7:35:58
+
+ Project file: C:\Users\joshu\01_MyFiles\03_Professional\nbp_2024\results\hrcd.7prj
+  Main matrix: C:\Users\joshu\AppData\Roaming\MjM Software Design\PCORD 7\WORK.MJM
+Second matrix: C:\Users\joshu\AppData\Roaming\MjM Software Design\PCORD 7\WORK2.MJM
+
+Permutation-based nonparametric MANOVA calculated with method of:
+Anderson, M. J.  2001.  A new method for non-parametric multivariate
+     analysis of variance.  Austral Ecology 26:32-46.
+
+hrcd 2019 2023 rel by row max perMANOVA                                         
+
+        Groups were defined by values of: change      
+                                     and: time        
+
+        Main matrix has:       48 species by      69 traits      
+
+        Distance measure = Sorensen (Bray-Curtis)        
+
+
+Evaluation of differences in traits between groups.
+Design: Two-way factorial                                  
+Randomization test of significance of pseudo F values
+     Number of randomizations:        4999
+     Random number seed:              5815 selected by time.
+
+---------------------------------------------------------------------------
+Source         d.f.        SS           MS           F           p *    
+---------------------------------------------------------------------------
+change             1    0.66378      0.66378       2.4952         0.005600
+time               1    0.31177      0.31177       1.1720         0.282800
+Interaction        1    0.15275      0.15275      0.57419         0.886400
+Residual          44     11.705      0.26602    
+Total             47     12.833    
+---------------------------------------------------------------------------
+
+
+Statistics from randomizations
+--------------------------------------------------------------------------------------------------
+                                          F from randomized groups                       
+                      F         --------------------------------------------             
+   Source          Observed         Mean         Maximum          S.Dev           n           p * 
+--------------------------------------------------------------------------------------------------
+change              2.49519        1.00851        3.21573        0.40076         27       0.005600
+time                1.17196        1.00559        3.47140        0.40228       1413       0.282800
+Interac.            0.57419        1.00611        3.52025        0.41004       4431       0.886400
+--------------------------------------------------------------------------------------------------
+* proportion of randomized trials with indicator value 
+  equal to or exceeding the observed indicator value.
+  p = (1 + n)/(1 + N)
+  n = number of runs >= observed
+  N = number of randomized runs
+
+
+Variance components estimated for Mixed Model II, first factor assumed fixed)
+Ignore variance components if you consider the factor to have fixed effects.
+COMPONENTS OF VARIANCE
+--------------------------------------------
+Source         Variance       % of variation
+change                     Variance component not estimated for fixed factor
+time            0.66259E-02          2.517
+Interaction    -0.94397E-02         -3.586
+Residual        0.26602            101.069
+Total           0.26321            100.000
+--------------------------------------------
+
+**************************** PerMANOVA finished ****************************
+24 Sep 2024,  7:35:58
+
+
+********************* Nonmetric Multidimensional Scaling *********************
+PC-ORD, 7.11                
+24 Sep 2024,  7:42:46
+
+ Project file: C:\Users\joshu\01_MyFiles\03_Professional\nbp_2024\results\hrcd.7prj
+  Main matrix: C:\Users\joshu\AppData\Roaming\MjM Software Design\PCORD 7\WORK.MJM
+
+
+hrcd 2019 2023 rel by row max NMS auto                                          
+Ordination of species in traits space.         48 species            69 traits      
+
+         The following options were selected:
+ANALYSIS OPTIONS
+         1.   SORENSEN = Distance measure
+         2.          4 = Number of axes (max. = 6)
+         3.        200 = Maximum number of iterations
+         4.     RANDOM = Starting coordinates (random or from file)
+         5.          1 = Reduction in dimensionality at each cycle
+         6. NO PENALTY = Tie handling (Strategy 1 does not penalize
+                         ties with unequal ordination distance,
+                         while strategy 2 does penalize.)
+         7.       0.20 = Step length (rate of movement toward minimum stress)
+         8.   USE TIME = Random number seeds (use time vs. user-supplied)
+         9.         50 = Number of runs with real data
+        10.         50 = Number of runs with randomized data
+        11.        YES = Autopilot
+        12.   0.000010 = Stability criterion, standard deviations in stress
+                         over last  10 iterations.
+        13.     MEDIUM = Speed vs. thoroughness
+OUTPUT OPTIONS
+        14.         NO = Write distance matrix?
+        15.         NO = Write starting coordinates?
+        16.         NO = List stress, etc. for each iteration?
+        17.        YES = Plot stress vs. iteration?
+        18.         NO = Plot distance vs. dissimilarity?
+        19.         NO = Write final configuration?
+        20. PRINC.AXES = Write varimax-rotated, principal axes, or unrotated scores for graph?
+        21.         NO = Write run log?
+        22.         NO = Write weighted-average scores for traits?
+------------------------------------------------------------------------------
+
+      4656 = Seed for random number generator.
+
+            83 = Number of tie blocks in dissimilarity matrix.
+           266 = Number of elements involved in ties.
+          1128 = Total number of elements in dissimilarity matrix.
+        23.582 = Percentage of elements involved in ties.
+
+
+
+STRESS IN RELATION TO DIMENSIONALITY (Number of Axes)
+-------------------------------------------------------------------------------------
+          Stress in real data          Stress in randomized data
+               50 run(s)               Monte Carlo test,   50 runs
+      -------------------------  ----------------------------------------------------
+Axes  Minimum     Mean  Maximum  Minimum     Mean  Maximum      p         n      C
+-------------------------------------------------------------------------------------
+   1   21.561   30.221   35.223   42.760   50.781   56.508    0.0196      0    0.4049
+   2   15.337   15.635   17.281   24.124   27.525   40.175    0.0196      0    0.4320
+   3   11.633   11.958   12.758   16.314   18.809   21.194    0.0196      0    0.3643
+   4    9.245    9.580   10.164   12.259   14.366   15.912    0.0196      0    0.3331
+-------------------------------------------------------------------------------------
+p = proportion of randomized runs with stress < or = observed stress
+i.e., p  = (1 + n)/(1 + N)
+      n = no. permutations <= observed
+      N = no. permutations
+      C = Cohesion = 1 - SmeanObserved/SmeanRand)
+
+
+Conclusion:  a 2-dimensional solution is recommended.
+Now rerunning the best ordination with that dimensionality.
+
+Selected file CONFIG2.GPH  for the starting configuration for
+   the final run.
+
+
+hrcd 2019 2023 rel by row max NMS auto                                          
+Ordination of species in traits space.         48 species            69 traits      
+
+         The following options were selected:
+ANALYSIS OPTIONS
+         1.   SORENSEN = Distance measure
+         2.          2 = Number of axes (max. = 6)
+         3.        200 = Maximum number of iterations
+         4.  FROM FILE = Starting coordinates (random or from file)
+         5.          2 = Reduction in dimensionality at each cycle
+         6. NO PENALTY = Tie handling (Strategy 1 does not penalize
+                         ties with unequal ordination distance,
+                         while strategy 2 does penalize.)
+         7.       0.20 = Step length (rate of movement toward minimum stress)
+         8.   USE TIME = Random number seeds (use time vs. user-supplied)
+         9.          1 = Number of runs with real data
+        10.          0 = Number of runs with randomized data
+        11.        YES = Autopilot
+        12.   0.000010 = Stability criterion, standard deviations in stress
+                         over last  10 iterations.
+        13.     MEDIUM = Speed vs. thoroughness
+OUTPUT OPTIONS
+        14.         NO = Write distance matrix?
+        15.         NO = Write starting coordinates?
+        16.         NO = List stress, etc. for each iteration?
+        17.        YES = Plot stress vs. iteration?
+        18.         NO = Plot distance vs. dissimilarity?
+        19.        YES = Write final configuration?
+        20. PRINC.AXES = Write varimax-rotated, principal axes, or unrotated scores for graph?
+        21.         NO = Write run log?
+        22.        YES = Write weighted-average scores for traits?
+------------------------------------------------------------------------------
+
+
+File containing starting coordinates:
+CONFIG2.GPH                                                                                                                                                                                                                                     
+
+      15.34739 = final stress for 2-dimensional solution
+       0.00000 = final instability
+            34 = number of iterations
+
+MEASURES OF FIT
+R²n  (nonmetric fit) =   0.9764  Intrinsic measure for NMS. Null: all points co-located.
+R²l  (linear fit)    =   0.9398  Null: all ordination distances equal.
+R²m  (metric fit)    =   0.7572  Null: no linear relationship with observed dissimilarities.
+
+CHANCE-CORRECTED EVALUATIONS
+Improvement:       I =   0.6264
+Null model: final configuration no better than initial random configuration.
+Interpretation: 0 = random expectation, 1 = perfect fit, <0 = worse than random expectation
+Basis:                   2 dimensions
+                      50 = number of random initial configurations used
+                 41.0803 = average initial stress
+                 15.3474 = final stress
+
+Association:       A =   0.4424
+Null model: relationships among columns no stronger than expected chance, based on shuffling within columns.
+Interpretation: 0 = random expectation, 1 = perfect fit, <0 = worse than random expectation
+Basis:                   2 dimensions
+                      50 = number of randomizations used
+                 15.3474 = minimum final stress from real runs
+                 27.5254 = average final stress from randomizations
+
+Cohesion:          C =   0.4320
+C = 1 - SmeanObserved/SmeanRand
+Interpretation: 0 = random expectation, 1 = perfect fit, <0 = worse than random expectation
+Basis:                   2 dimensions
+                      50 = number of randomizations used
+                 15.6349 = average final stress from real runs
+                 27.5254 = average final stress from randomizations
+
+
+Final configuration (ordination scores) for this run
+    species               Axis
+  Number Name                  1          2
+       1 CP3.0.0          0.2029     0.1893
+       2 CV2.0.0          0.2370     0.1146
+       3 CV3.0.0          0.2489     0.3883
+       4 CV9.0.0          0.3901     0.1784
+       5 DB5.0.0          0.7605     0.3727
+       6 DCH2.1.0        -0.5252     0.8310
+       7 DCH4.1.0        -0.2928     1.0539
+       8 DCH5.1.0        -0.3927     1.0684
+       9 DE6.0.0          0.0725     0.0152
+      10 DE7.0.0          0.2224     0.2956
+      11 DNL3.0.0         0.1404     0.6482
+      12 DSL6.0.0        -0.6339    -0.1333
+      13 GEM1.0.0         0.3017    -1.6399
+      14 GEM7.1.0         2.7195    -0.8172
+      15 GGM3.0.0         0.9602    -2.1887
+      16 MB1.1.0         -0.5557    -0.3765
+      17 MS3.1.0         -0.0852    -0.3278
+      18 MWF1.1.0         0.3626    -1.0315
+      19 AM1.1.0         -0.5104    -0.1099
+      20 AM2.1.0         -0.2436     0.1326
+      21 AM5.1.0         -0.2720     0.0223
+      22 AM6.1.0         -0.0294     0.4454
+      23 AM8.0.0         -0.1967     0.3790
+      24 AM10.1.0         0.0268     0.6869
+      25 CP3.0.1          0.2788     0.5226
+      26 CV2.0.1         -0.1907     0.6095
+      27 CV3.0.1          0.0593     0.0838
+      28 CV9.0.1         -0.0069     0.2359
+      29 DB5.0.1          0.3041     0.1639
+      30 DCH2.1.1        -0.4407     0.8168
+      31 DCH4.1.1        -0.4086     0.7033
+      32 DCH5.1.1        -0.6134     0.7305
+      33 DE6.0.1         -0.2352    -0.0407
+      34 DE7.0.1         -0.3806    -0.0811
+      35 DNL3.0.1        -0.6654     0.3159
+      36 DSL6.0.1        -0.6726     0.0832
+      37 GEM1.0.1         0.2745    -0.8512
+      38 GEM7.1.1         1.7163    -1.5546
+      39 GGM3.0.1         0.8223    -2.7761
+      40 MB1.1.1         -0.0223     0.1687
+      41 MS3.1.1         -0.3276     0.1745
+      42 MWF1.1.1         0.0366    -1.0799
+      43 AM1.1.1         -0.2258    -0.1409
+      44 AM2.1.1         -0.6300     0.1512
+      45 AM5.1.1         -0.4525     0.3634
+      46 AM6.1.1         -0.1114     0.1378
+      47 AM8.0.1         -0.1680     0.6797
+      48 AM10.1.1        -0.8480     0.3865
+
+
+
+      PLOT OF STRESS V. ITERATION NUMBER
+       46.5255699....................................
+                 .                                  .
+                 .                                  .
+                 .*                                 .
+                 .                                  .
+                 . ***                              .
+                 .    **                            .
+                 .                                  .
+                 .      *                           .
+                 .                                  .
+                 .         *                        .
+                 .                                  .
+                 .       *                          .
+                 .                                  .
+                 .                                  .
+      STRESS     .        *                         .
+                 .           *                      .
+                 .          *                       .
+                 .             *                    .
+                 .            * **                  .
+                 .                ******************.
+                 .                                  .
+                 .                                  .
+                 .                                  .
+                 .                                  .
+                 .                                  .
+                 .                                  .
+                 .                                  .
+                 .                                  .
+                 .                                  .
+                 .                                  .
+        0.0000000....................................
+                           10        20        30
+                      ITERATION NUMBER
+
+
+
+
+
+Principal axes rotation of 2-dimensional solution.
+
+Configuration after rotation is listed below.
+
+Final configuration (ordination scores) for this run
+    species               Axis
+  Number Name                  1          2
+       1 CP3.0.0          0.0478     0.2734
+       2 CV2.0.0         -0.0334     0.2612
+       3 CV3.0.0          0.1894     0.4206
+       4 CV9.0.0         -0.0636     0.4242
+       5 DB5.0.0         -0.1031     0.8406
+       6 DCH2.1.0         0.9830     0.0139
+       7 DCH4.1.0         1.0428     0.3303
+       8 DCH5.1.0         1.1095     0.2545
+       9 DE6.0.0         -0.0268     0.0691
+      10 DE7.0.0          0.1261     0.3477
+      11 DNL3.0.0         0.4663     0.4716
+      12 DSL6.0.0         0.2345    -0.6039
+      13 GEM1.0.0        -1.5385    -0.6428
+      14 GEM7.1.0        -2.1698     1.8318
+      15 GGM3.0.0        -2.3579    -0.3910
+      16 MB1.1.0         -0.0120    -0.6711
+      17 MS3.1.0         -0.2281    -0.2504
+      18 MWF1.1.0        -1.0621    -0.2596
+      19 AM1.1.0          0.1867    -0.4875
+      20 AM2.1.0          0.2442    -0.1316
+      21 AM5.1.0          0.1672    -0.2157
+      22 AM6.1.0          0.3892     0.2186
+      23 AM8.0.0          0.4249     0.0422
+      24 AM10.1.0         0.5608     0.3976
+      25 CP3.0.1          0.2855     0.5189
+      26 CV2.0.1          0.6147     0.1732
+      27 CV3.0.1          0.0378     0.0955
+      28 CV9.0.1          0.2014     0.1230
+      29 DB5.0.1         -0.0288     0.3442
+      30 DCH2.1.1         0.9249     0.0769
+      31 DCH4.1.1         0.8124     0.0418
+      32 DCH5.1.1         0.9469    -0.1149
+      33 DE6.0.1          0.0944    -0.2192
+      34 DE7.0.1          0.1399    -0.3631
+      35 DNL3.0.1         0.6280    -0.3849
+      36 DSL6.0.1         0.4371    -0.5180
+      37 GEM1.0.1        -0.8629    -0.2349
+      38 GEM7.1.1        -2.2396     0.5887
+      39 GGM3.0.1        -2.7746    -0.8273
+      40 MB1.1.1          0.1535     0.0735
+      41 MS3.1.1          0.3251    -0.1791
+      42 MWF1.1.1        -0.9246    -0.5591
+      43 AM1.1.1          0.0053    -0.2661
+      44 AM2.1.1          0.4707    -0.4452
+      45 AM5.1.1          0.5515    -0.1806
+      46 AM6.1.1          0.1763    -0.0180
+      47 AM8.0.1          0.6611     0.2304
+      48 AM10.1.1         0.7869    -0.4993
+
+Writing weighted average scores on 2 axes for      69 traits      
+   into file for graphing.
+
+******************** NMS ordination completed ********************
+24 Sep 2024,  7:42:55
+        0.14 minutes elapsed time.
+
+******************** Permutation based MANOVA (PerMANOVA) ********************
+PC-ORD, 7.11                
+24 Sep 2024,  8:17:35
+
+ Project file: C:\Users\joshu\01_MyFiles\03_Professional\nbp_2024\results\hrcd.7prj
+  Main matrix: C:\Users\joshu\01_MyFiles\03_Professional\nbp_2024\results\srm_2019&2023_hrcd_1m.mjm
+Second matrix: C:\Users\joshu\01_MyFiles\03_Professional\nbp_2024\results\covs_2019&2023_hrcd_2M.mjm
+
+Permutation-based nonparametric MANOVA calculated with method of:
+Anderson, M. J.  2001.  A new method for non-parametric multivariate
+     analysis of variance.  Austral Ecology 26:32-46.
+
+hrcd 2019 2023 rel by row perMANOVA 2-factorial                                 
+
+        Groups were defined by values of: change      
+                                     and: time        
+
+        Main matrix has:       48 units by      69 species     
+
+        Distance measure = Sorensen (Bray-Curtis)        
+
+
+Evaluation of differences in species between groups.
+Design: Two-way factorial                                  
+Randomization test of significance of pseudo F values
+     Number of randomizations:        4999
+     Random number seed:              3528 selected by time.
+
+---------------------------------------------------------------------------
+Source         d.f.        SS           MS           F           p *    
+---------------------------------------------------------------------------
+change             1    0.66378      0.66378       2.4952         0.003800
+time               1    0.31177      0.31177       1.1720         0.282400
+Interaction        1    0.15275      0.15275      0.57419         0.893600
+Residual          44     11.705      0.26602    
+Total             47     12.833    
+---------------------------------------------------------------------------
+
+
+Statistics from randomizations
+--------------------------------------------------------------------------------------------------
+                                          F from randomized groups                       
+                      F         --------------------------------------------             
+   Source          Observed         Mean         Maximum          S.Dev           n           p * 
+--------------------------------------------------------------------------------------------------
+change              2.49519        1.00353        3.25197        0.39228         18       0.003800
+time                1.17196        0.99538        3.59081        0.39365       1411       0.282400
+Interac.            0.57419        1.00404        3.13914        0.39457       4467       0.893600
+--------------------------------------------------------------------------------------------------
+* proportion of randomized trials with indicator value 
+  equal to or exceeding the observed indicator value.
+  p = (1 + n)/(1 + N)
+  n = number of runs >= observed
+  N = number of randomized runs
+
+
+Variance components estimated for Mixed Model II, first factor assumed fixed)
+Ignore variance components if you consider the factor to have fixed effects.
+COMPONENTS OF VARIANCE
+--------------------------------------------
+Source         Variance       % of variation
+change                     Variance component not estimated for fixed factor
+time            0.66259E-02          2.517
+Interaction    -0.94397E-02         -3.586
+Residual        0.26602            101.069
+Total           0.26321            100.000
+--------------------------------------------
+
+**************************** PerMANOVA finished ****************************
+24 Sep 2024,  8:17:35
