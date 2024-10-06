@@ -94,9 +94,9 @@ pcmp <- ggplot(dcmp, aes(x = year, y = park, fill= completeness)) +
 pcmp
 
 ## print plot if desired
-pdf("figures/02_data_completeness.pdf", width = 11)
-print(pcmp)
-dev.off()
+# pdf("figures/02_data_completeness.pdf", width = 11)
+# print(pcmp)
+# dev.off()
 
 
  #############################
@@ -123,9 +123,9 @@ pyr <- ggplot(dyr, aes(x = year, y = nsurv)) +
 pyr
 
 ### print plot to pdf if desired
-pdf("figures/02_nsurv_yr.pdf")
-print(pyr)
-dev.off()
+# pdf("figures/02_nsurv_yr.pdf")
+# print(pyr)
+# dev.off()
 
 ## SURVEYS BY LOCATION
 ### create dataframe with count of distinct surveys by park, then plot results
@@ -146,9 +146,9 @@ pprk <- ggplot(dprk, aes(x = park, y = nsurv)) +
 pprk
 
 #### print chart to pdf if desired
-pdf("figures/02_nsurv_park.pdf", width = 11, height = 7)
-print(pprk)
-dev.off()
+# pdf("figures/02_nsurv_park.pdf", width = 11, height = 7)
+# print(pprk)
+# dev.off()
 
 #############################
 ###### species summary ######
@@ -190,9 +190,9 @@ pfreq <- ggplot(slice_max(dprop, prop_reported, n = 20), aes(x = species, y = pr
 pfreq
 
 #### print plot if desired
-pdf("figures/02_prop_top_20.pdf", width = 11, height = 7)
-print(pfreq)
-dev.off()
+# pdf("figures/02_prop_top_20.pdf", width = 11, height = 7)
+# print(pfreq)
+# dev.off()
 
 # NOT ID'D TO SPECIES LEVEL
 ## create dataframe with just unresolved species, then count how many times each sp. occurs in the dataset
@@ -214,9 +214,9 @@ punr <- ggplot(dunr, aes(x = species, y = n)) +
 punr
 
 ### print plot
-pdf("figures/02_sp._reports.pdf", width = 11, height = 7)
-print(punr)
-dev.off()
+# pdf("figures/02_sp._reports.pdf", width = 11, height = 7)
+# print(punr)
+# dev.off()
 
 # ABUNDANCE
 
@@ -307,9 +307,9 @@ pmeanS <- ggplot(dS, aes(x = park, y = S)) +
 pmeanS
 
 ## print plot if desired
-pdf("figures/02_mean_S_by_park.pdf", width = 11)
-print(pmeanS)
-dev.off()
+# pdf("figures/02_mean_S_by_park.pdf", width = 11)
+# print(pmeanS)
+# dev.off()
 
 
 ########## END ###########
