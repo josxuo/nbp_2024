@@ -83,7 +83,7 @@ dcmp <- dat %>%
   left_join(., dmths) %>%
   mutate(completeness = nloop / Nloop / Nmonth)
 
-## visualize with a "heat map"
+## visualize with a heat map
 pcmp <- ggplot(dcmp, aes(x = year, y = park, fill= completeness)) + 
   geom_tile() + 
   scale_fill_gradient(low = bcs_colors["yellow green"], high = bcs_colors["dark green"]) + 
@@ -105,11 +105,13 @@ pcmp
  
 ## HOW MANHY SURVEYS IN DATASET?
 
-length(unique(dat$survey_id))  # 39174 surveys
+length(unique(dat$survey_id))  # 39174 surveys BUT this includes the odd Magnuson surveys with non-existent station IDs
+dat %>% filter(!is.na(station.code)) %>% summarise(nsurv = n_distinct(survey_id))  ## 38,771 surveys
 
 ## SURVEYS BY YEAR
 ### create dataframe with count of distinct surveys per year, then plot results
 dyr <- dat %>%
+  filter(!is.na(station.code)) %>%
   group_by(year) %>%
   summarise(nsurv = n_distinct(survey_id))
 
@@ -130,6 +132,7 @@ pyr
 ## SURVEYS BY LOCATION
 ### create dataframe with count of distinct surveys by park, then plot results
 dprk <- dat %>%
+  filter(!is.na(station.code)) %>%
   group_by(park) %>%
   summarise(nsurv = n_distinct(survey_id)) %>%
   ungroup() %>%
@@ -156,7 +159,7 @@ pprk
 
 # SPECIES TOTAL
 ## remove observations not resolved to species level and remove hybrids
-dsp <- dat %>% filter(!str_detect(species, pattern = " sp."), !str_detect(species, pattern = " x "))
+dsp <- dat %>% filter(!str_detect(species, pattern = " sp.| x "))
 sort(unique(dsp$species)) # 212 species
 
 ## FREQUENTLY REPORTED SPECIES
@@ -282,7 +285,8 @@ ggplot(filter(dmapsN, species %in% spp), aes(x = year, y = species, fill = maps_
 
 # SPECIES TOTALS BY LOCATION
 dS <- dat %>%
-  filter(!str_detect(species, pattern = " sp."), !str_detect(species, pattern = " x ")) %>%  ## filter out sp and hybrids
+  filter(!str_detect(species, pattern = " sp.| x ",),  ## filter out sp and hybrids
+         species != "Spotted Owl") %>%  ## truely don't think we saw the spotted owl at Magnuson
   group_by(park) %>% 
   summarise(S = n_distinct(species)) %>%
   ungroup() %>%
@@ -300,7 +304,7 @@ pmeanS <- ggplot(dS, aes(x = park, y = S)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.1)),
                      breaks = c(75, 150)) + 
   coord_flip() + 
-  annotate("text", x = 1, y = 107, label = paste("Avg =", meanS, "species"), color = bcs_colors["dark green"]) +
+  annotate("text", x = 1, y = 107, label = paste("Avg =", round(meanS, 0), "species"), color = bcs_colors["dark green"]) +
   theme_bcs() +
   theme(panel.grid.major.y = element_blank())
 
