@@ -78,16 +78,16 @@ overall_p <- function(my_model) {
 # function for returning count circle codes with a complete set of survey data for a given set of years and months
 complete <- function(years, months, data) {
   int <- data %>%
-    filter(year %in% years, month %in% months)
+    filter(year %in% years, month %in% months, exclusions == "none")
   
-  comp <- int %>% group_by(code, year) %>%
+  comp <- int %>%
+    group_by(station.code, year) %>%
     reframe(nsurv = n_distinct(survey_id)) %>%
     pivot_wider(names_from = year, values_from = nsurv) %>%
-    filter(!is.na(code)) %>%
     replace(is.na(.), 0) %>%
     mutate(row_sum = apply(.[, -1], 1, sum)) %>%
     filter(row_sum == length(years) * length(months)) %>%
-    pull(code)
+    pull(station.code)
 }
 
 #########################
@@ -96,11 +96,11 @@ complete <- function(years, months, data) {
 
 # load tidied data (see script "01_tidy_raw_nbp.R" for details)
 dat <- read_excel("data/b_intermediate_data/nbp_tidy_jan_24.xlsx")
-codes <- read_csv("data/c_analysis_data/nbp_circ_codes.csv") # table with alphanumeric codes for count circles
-dat <- left_join(dat, codes)
 
 # Define active NBP sites
-status <- data.frame(park = sort(unique(dat$park)), 
+status <- data.frame(park = c("Bliner Property", "Carkeek Park", "Cheasty Greenspace", "Clark Lake Park", "Discovery Park", "Genesee Park",
+                              "Golden Gardens Park", "Jenkin's Creek Park", "Lake Forest Park", "Lincoln Park", "Magnsuon Park", "Seward Park",
+                              "Shadow Lake Bog", "Soos Creek", "Walsh Property", "Washington Park Arboretum"), 
                      status = c("inactive", "active", "active", "inactive", "active",
                                 "active", "active", "inactive", "active", "active",
                                 "active", "active", "inactive", "inactive", "inactive",
@@ -177,7 +177,7 @@ wood <- c("Hairy Woodpecker", "Downy Woodpecker", "Pileated Woodpecker", "Northe
 ## filter data for observations "resolved" to species level (dres)
 dres <- dat %>% filter(!str_detect(species, pattern = " sp."),  ## this leaves in hybrids
                        #!year %in% c(1996, 2020, 2021, 2024),   ## will need to remove years for which there are very incomplete data later
-                       !is.na(code), ## remove the odd stations like MF56, whatever that is
+                       !is.na(station.code), ## remove the odd stations like MF56, whatever that is
                        species != "Spotted Owl") %>%  ## there's no way we saw a spotted owl at Magnuson
   mutate(obs = seen + heard + fly)  ## combine counts of seen heard fly
 
@@ -189,25 +189,25 @@ paste("NBP surveys recorded", n_distinct(dres$species), "species in Seattle City
 
 # write species list to csv file for reporting, include the number of years the species was recorded and the number of sites
 # the species was recorded at
-## species.list <- dres %>% group_by(species) %>%
- reframe(count = sum(seen, heard, fly), yrs = n_distinct(year), sites = n_distinct(code))
+species.list <- dres %>% group_by(species) %>%
+ reframe(count = sum(seen, heard, fly), yrs = n_distinct(year), sites = n_distinct(station.code))
 
-## write.csv(species.list, "results/species_list.csv", row.names = FALSE)
+write.csv(species.list, "results/species_list.csv", row.names = FALSE)
 
 ## This is a summary of the entire dataset. For trend analysis, we need to compare sites that have been consistently monitored over the same time frame
 
 ## select years
 years <- c(2005:2019, 2022, 2023) ## this excludes years with large data gaps
-months <- c(1)
+months <- c(2)
 units <- complete(years, months, data = dres)  # previously found may had the greatest number of surveys across years and sites
 
 ## create data frame aggregating total species observed each year & total count of birds each year for given month(s)
 S <- dres %>% 
   # filter just for those circles with consistent monitoring over the years/months selected
-  filter(code %in% units, month %in% months, year %in% years) %>%
+  filter(station.code %in% units, month %in% months, year %in% years) %>%
   
   # aggregate number of species reported and bird counts by count circle and year
-  group_by(code, year) %>%
+  group_by(station.code, year) %>%
   reframe(yearS = n_distinct(species), count = sum(obs)) %>%
   
   # scale year so it starts at 1 for ease in use with models later
@@ -216,14 +216,14 @@ S <- dres %>%
 ## create data frame with average species detected and mean abundance per survey
 meanS <- dres %>% 
   # filter just for those circles with consistent monitoring over the years/months selected
-  filter(code %in% units, month %in% months, year %in% years) %>%
+  filter(station.code %in% units, month %in% months, year %in% years) %>%
   
   # aggregate number of species and individuals reported during each individual survey (keep code and year for use later)
-  group_by(code, year, survey_id) %>%
+  group_by(station.code, year, survey_id) %>%
   reframe(nspecies = n_distinct(species), count = sum(obs)) %>%
   
   # group by count circle and year and find mean number of species reported by survey and mean abundance per survey
-  group_by(code, year) %>%
+  group_by(station.code, year) %>%
   reframe(meanS = mean(nspecies), maps = mean(count))
 
 ## join data frames
@@ -262,7 +262,7 @@ summary(lm(log(maps) ~ scaleyr, data = S))
 ## February: no trend
 ## March: march abundance and richness declining
 ## April: possibly richness declining (p < .1), abundance declining
-## May: possibly richness declinign (p < .1), abundance declining
+## May: possibly richness declining (p < .1), abundance declining
 ## June: abundance and richness declining
 ## July: abundance declining; no trend richness
 ## August: richness declining; no trend abundance
@@ -328,7 +328,7 @@ spp <- sort(unique(dres$species))
 for(i in 1:length(spp)){
   for(j in 1:12){
     units <- complete(years = years, months = j, data = dres)
-    d <- dres %>% filter(year %in% years, month == j, species == spp[i], code %in% units) %>%
+    d <- dres %>% filter(year %in% years, month == j, species == spp[i], station.code %in% units) %>%
       group_by(year, species) %>% reframe(count = sum(obs)) %>% mutate(scaleyr = year - min(year) + 1)
     
     if(dim(d)[1] <= 1){
@@ -564,7 +564,7 @@ for(i in 1:length(focal_parks)) {
 }
 
 Strends ## suggestive trends stat significant for Disco, possibly Genesee, Golden Gardens
-        ## possibly Lake Forest Park, possibly Magnuson, possibly seward
+        ## possibly Lake Forest Park, possibly Magnuson, possibly Seward
 
 
 ### mean per-survey abundance. NOTE THIS ANALYSIS DOESN'T CONTROL FOR CONSISTENT SITE MONITORING ACROSS YEARS. 
@@ -729,23 +729,6 @@ pspecies <- ggplot(dabundyr, aes(x = year, y = maps)) +
 
 pspecies
 
-sp <- sort(unique(dabundyr$species))
-coeff <- numeric(length = length(group))
-rsq <- numeric(length = length(group))
-pval <- numeric(length = length(group))
-
-for(i in 1:length(group)) {
-  # Subset the data for the current species
-  d <- dabundyr[dabundyr$species == sp[i], ]
-  model <- lm(maps ~ year, data = d)
-  coeff[i] <- coef(model)["year"]
-  rsq[i] <- summary(model)$r.squared
-  pval[i] <- overall_p(model)
-  
-  print(paste("Processed group", group[i], "with values beta =", coeff[i], "rsq =", rsq[i], "and p-val =", pval[i]))
-}
-
-## Overall mean abundance per survey
 
 #### END #### 
 
