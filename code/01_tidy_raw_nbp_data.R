@@ -43,10 +43,12 @@ int[is.na(int$fly), ]$fly <- 0
 
 
 ## check for duplicates
-#dup <- sum(duplicated(raw)) # 1032 fully duplicated records
-#sum(duplicated(select(raw, -notes))) - dup # 85 additional duplicates when ignoring note field 
-#sum(duplicated(select(raw, survey_date, park, loop, station, species, seen, heard, fly))) - dup - 85 # 85 additional duplicates at the species observations level
-#sum(duplicated(select(raw, survey_date, park, loop, station, species))) - dup - 85 -85 # 204 additional duplicates at species level, for total of 1406 duplicates (0.7% of records)
+# dup <- sum(duplicated(raw)) # 1032 fully duplicated records
+# sum(duplicated(select(raw, -notes))) - dup # 85 additional duplicates when ignoring note field 
+# sum(duplicated(select(raw, survey_date, park, loop, station, species, seen, heard, fly))) - dup - 85 # 85 additional duplicates at the species observations level
+# sum(duplicated(select(raw, survey_date, park, loop, station, species))) - dup - 85 -85 # 204 additional duplicates at species level, for total of 1406 duplicates (0.7% of records)
+                                                                                       # NOTE: actually 203; one is a triplicate. 
+
 
 ### dedup dataset
 #### remove fully duplicated records
@@ -98,7 +100,7 @@ xcnt_dup_sub1 <- xcnt_dup[duplicated(select(xcnt_dup, all_of(columns))) | duplic
 ###### step 2: create loop that returns obs_id for duplicated observation with greatest number of NAs
 ####### first create indices/parameters for use in loop
 inds <- unique(xcnt_dup_sub1$ind) 
-rem <- numeric(length = length(inds))
+rem <- numeric(length = length(inds)) ## empty vector to hold resuls
 
 ####### set up and run for loop
 for(i in 1:length(inds)) {
@@ -115,7 +117,7 @@ xcnt_dup_sub2 <- xcnt_dup[!xcnt_dup$obs_id %in% xcnt_dup_sub1$obs_id, ]
 
 ####### step 2: create loops that returns obs_id for duplicated observation with most NAs
 inds <- unique(xcnt_dup_sub2$ind)
-rem <- numeric(length = length(inds)*2)
+rem <- numeric(length = length(inds)*2) ## empty vector to hold results
 
 for(i in 1:length(inds)){
   dups <- xcnt_dup_sub2[xcnt_dup_sub2$ind == inds[i], ]
@@ -148,17 +150,20 @@ xsp_dup <- int[duplicated(select(int, all_of(columns))) | duplicated(select(int,
 ## that I would like to merge the observations such that I keep the observation with the most data (i.e., fewest NAs) and then take the average value 
 ## for each of seen, heard, fly, rounded to the nearest integer
 
+## NOTE: Paul suggested a simpler approach of just keeping the records with fewest NAs. 
+
 ###### step 1: create useful indices / columns
 xsp_dup$ind <- paste(xsp_dup$survey_id, xsp_dup$species, sep = "-")
 xsp_dup$na_cnt <- apply(X = is.na(xsp_dup), MARGIN = 1, FUN = sum)
 
+# view(xsp_dup)
 ###### step 2: create a for loop to return obs_id for dup with fewest NAs, or if same number of NAs, the first one?
 inds <- unique(xsp_dup$ind)
-rem <- numeric(length = length(inds)) # there is one survey/species with a triple duplicate
+rem <- numeric(length = length(inds)) # there is one survey/species with a triplicate
 
 for(i in 1:length(inds)) {
   dups <- xsp_dup[xsp_dup$ind == inds[i], ]
-  rem[i] <- dups[which.max(dups$na_cnt), ]$obs_id
+  rem[i] <- dups[which.max(dups$na_cnt), ]$obs_id ## this leaves one of the triplicated records, will deal with that manually later
 }
 
 ###### step 3: filter out from intermediate dataset
@@ -201,7 +206,8 @@ int[int$obs_id %in% df$obs_id, ]$fly <- df$fly
 ## looks good
 
 ## OK so I've merged the data, now I think I still need to filter out the one remaining duplicates from Bliner property obs_id = 51864
-int <- filter(int, !obs_id == 51864)
+int <- filter(int, !obs_id == 51864)  ## this is the record that was triplicated and wasn't removed earlier in the process
+
 
 ##I am expecting 1406 difference in observations between raw and intermediate dataset
 length(raw$year) - length(int$year)  ## Great.
@@ -218,6 +224,71 @@ int[int$species == "Northwestern Crow", ]$species <- "American Crow"
 int[int$species == "Thayer's Gull", ]$species <- "Iceland Gull"
 int[int$species == "Pacific-slope Flycatcher", ]$species <- "Western Flycatcher"
 
+# Add alphanumeric codes for count circles and species
+station.codes <- read_csv("data/c_analysis_data/nbp_circ_codes.csv") ## table with circle codes
+bird.codes <- read_xlsx("data/zz_miscellaneous_data/NBP_species_list+functional_traits.xlsx") %>% select(alpha.code, com.name)
+
+### join to intermediate data
+int <- left_join(int, station.codes) %>%
+  left_join(., bird.codes, join_by("species" == "com.name")) %>%
+  rename(station.code = code, bird.code = alpha.code)
+
+view(int[is.na(int$station.code), ])
+
+## Explore station ID join
+
+sum(is.na(int$station.code)) ## 3988 stations not associated with a code. Why?
+
+unique(int[is.na(int$station.code), ]$park) ## the unassociated codes are only at Magnuson
+unique(int[is.na(int$station.code), ]$loop) ## unassociated codes at Back Fence, Main Drag, and South End loops
+unique(int[is.na(int$station.code), ]$station) ## 51, 52, 53, 54...hmm...
+
+weird.loops <- unique(int[is.na(int$station.code), ]$loop)
+
+magweird <- int %>%
+  filter(park == "Magnuson Park") %>%
+  mutate(check = paste(survey_date, park, loop, species, sep = "-"))
+
+weirds <- magweird[is.na(magweird$station.code), ] %>% pull(survey_date) %>% unique() # 116 dates
+range(weirds) # spanning 2010 to 2024
+
+tbl <- filter(magweird, survey_date %in% weirds) %>%
+  filter(loop == "Main Drag Loop") %>%
+  group_by(survey_date, loop, station) %>%
+  reframe(n = n()) %>% 
+  mutate(loc = paste(loop, station, sep = "-")) %>%
+  pivot_wider(names_from = loc, values_from = n)
+
+view(tbl) ## hmm, not immediately clear how to resolve. Should pose no issue when aggregating at park or loop level. How many birds are associated?
+
+magweird %>% filter(is.na(station.code)) %>% summarise(seen = sum(seen), heard = sum(heard), fly = sum(fly)) ## this is 13,779 birds
+
+
+## how many birds per year are associated with these records?
+
+prop <- int %>%
+  mutate(empty = ifelse(is.na(station.code), "empty", "notEmpty")) %>%
+  filter(park == "Magnuson Park") %>% group_by(empty) %>%
+  reframe(seen = sum(seen), heard = sum(heard), fly = sum(fly))
+
+prop[1,2]/prop[2, 2]
+prop[1,3]/prop[2, 3]
+
+## This is 12-19% of birds counted at Magnuson! Non trivial. Need an approach for handling this.
+
+## We could assume the error is consistent and assign 51s to station 1s, 52s to stations 2s,etc.
+## but I don't have insight into how this error arose.
+## Safest thing to do is to exclude these loops from station-level analyses.
+
+##
+int$exclusions <- case_when(int$park == "Magnuson Park" & int$loop %in% weird.loops ~ "exclude from site-level analyses", 
+                                TRUE ~ "none")
+
+## Explore alpha code join
+unique(int[is.na(int$bird.code), ]$species)
+
+### only sp. records and hybrids--all good!
+ 
 # Write intermediate data file
 # write.csv(int, "data/b_intermediate_data/nbp_tidy_jan_24.csv", row.names = FALSE) # .csv too large
 
