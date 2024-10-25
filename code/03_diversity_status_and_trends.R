@@ -145,7 +145,7 @@ wood <- c("Hairy Woodpecker", "Downy Woodpecker", "Pileated Woodpecker", "Northe
 # filter(dat, year < 2014) %>% summarise(S = n_distinct(species)) ## 238 distinct, but this includes sp. records and hybirds
 
 ## Filtering out sp. records takes us down to 207 species
-# filter(dat, year < 2014, !str_detect(species, " sp.")) %>% summarise(S = n_distinct(species))
+# filter(dat, year < 2014, !str_detect(species, " sp\\.")) %>% summarise(S = n_distinct(species))
 
 ## leaving in sp. records but removing hybrids? Gives 236
 # filter(dat, year < 2014, !str_detect(species, " x ")) %>% summarise(S = n_distinct(species))
@@ -175,7 +175,7 @@ wood <- c("Hairy Woodpecker", "Downy Woodpecker", "Pileated Woodpecker", "Northe
 
 # MOVING ON
 ## filter data for observations "resolved" to species level (dres)
-dres <- dat %>% filter(!str_detect(species, pattern = " sp."),  ## this leaves in hybrids
+dres <- dat %>% filter(!str_detect(species, pattern = " sp\\."),  ## this leaves in hybrids
                        #!year %in% c(1996, 2020, 2021, 2024),   ## will need to remove years for which there are very incomplete data later
                        !is.na(station.code), ## remove the odd stations like MF56, whatever that is
                        species != "Spotted Owl") %>%  ## there's no way we saw a spotted owl at Magnuson

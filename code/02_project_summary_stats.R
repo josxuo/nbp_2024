@@ -159,7 +159,7 @@ pprk
 
 # SPECIES TOTAL
 ## remove observations not resolved to species level and remove hybrids
-dsp <- dat %>% filter(!str_detect(species, pattern = " sp.| x "))
+dsp <- dat %>% filter(!str_detect(species, pattern = " sp\.| x "))
 sort(unique(dsp$species)) # 212 species
 
 ## FREQUENTLY REPORTED SPECIES
