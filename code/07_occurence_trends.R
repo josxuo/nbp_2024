@@ -36,40 +36,58 @@ overall_p <- function(my_model){
   return(p)
 }
 
-# Prepare data for analysis
-nbp$station_id <- paste(nbp$park, nbp$loop, nbp$station, sep = "-")
-circ$station_id <- paste(circ$park, circ$loop, circ$station, sep = "-")
-code_tbl <- select(circ, station_id, code)
-nbp <- left_join(nbp, code_tbl)
+# function for returning count circle codes with a complete set of survey data for a given set of years and months
+complete <- function(years, months, data) {
+  int <- data %>%
+    filter(year %in% years, month %in% months, exclusions == "none")
+  
+  comp <- int %>%
+    group_by(station.code, year) %>%
+    reframe(nsurv = n_distinct(survey_id)) %>%
+    pivot_wider(names_from = year, values_from = nsurv) %>%
+    replace(is.na(.), 0) %>%
+    mutate(row_sum = apply(.[, -1], 1, sum)) %>%
+    filter(row_sum == length(years) * length(months)) %>%
+    pull(station.code)
+}
+
 
 # will want to exclude introduced species
 intros <- c("European Starling", "House Sparrow", "Rock Pigeon", "Eurasian Collared-Dove",
             "California Quail")
 
+
 d <- nbp %>%
   # filter for years after 2003, excluding incomplete years 2020 and 2024.
   filter(year > 2003, year != 2020, year != 2024, 
          # filter out sp. records and hybrid records
-         !str_detect(species, pattern = " sp.| x "),
+         !str_detect(species, pattern = " sp\\.| x "),
          # filter out introduced species
          !species %in% intros,
          # filter for just non-overlapping count circles
-         code %in% covs$Station)
+         station.code %in% covs$Station)
 
 # inspect data
 ## sort(unique(d$species))
 ## sort(unique(d$year))
 ## sort(unique(d$code))
 
-# Set up tables/calculations useful late
+## Select circles with complete data for a given set of years, months to analyze
+sus <- complete(years = c(2004:2019, 2022, 2023), months = c(4), data = d)
+
+# Set up tables/calculations useful later
 ## number of surveys conducted each year
 nsurvPerYear <- d %>%
+  filter(station.code %in% sus) %>%
   group_by(year) %>%
   summarise(nsurv = n_distinct(survey_id))
 nsurvPerYear
 
+
+
 ## species response matrix -- mean abundance per survey by year
 srmAbund <- d %>%
+  filter(station.code %in% sus) %>%
   group_by(year, species) %>%
   summarise(count = sum(seen, heard, fly)) %>%
   ungroup() %>%
@@ -81,6 +99,7 @@ srmAbund <- d %>%
 
 ## species response matrix -- proportion of surveys reporting detections per year
 srmDet <- d %>%
+  filter(station.code %in% sus) %>%
   group_by(year, species) %>%
   summarise(det = n_distinct(survey_id)) %>%
   ungroup() %>%
@@ -200,3 +219,4 @@ ggplot(filter(d.max, species %in% max.decline.20$species), aes(x = year, y = max
   geom_smooth(method = "loess", se = FALSE) +#, color = bcs_colors['dg']) + 
   facet_wrap(~species, scales = "free") #+
 #  theme_bcs()
+

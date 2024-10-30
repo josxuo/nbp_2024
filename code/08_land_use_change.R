@@ -6,7 +6,8 @@
 # Question: Do sites that have experienced measurable land use change differ
 # in species composition pre/post change?
 
-# objective: export species response matrix for sites with complete data for years 2019 and 2023
+# objective: export species response matrix for sites with complete data for years 2019 and 2023. 
+# data will be used for 
 
 # libraries
 library(tidyverse)
@@ -44,7 +45,7 @@ completeness <- dat %>%
 
 view(completeness)
 
-## not really enough to tell. Maybe look at just a few months?
+## not sufficient. Maybe look at just spring when birds are most vocal?
 
 dat2 <- d %>%
   filter(year %in% c(2019, 2023),
@@ -69,7 +70,7 @@ df <- d %>%
          month %in% c(4, 5, 6),
          !str_detect(species, pattern = " sp.| x "),
          code %in% completeness2$code,
-         code != "LFM1")
+         code != "LFM1") ## lake forest park is an oddball, exclude
 
 
 spp <- sort(unique(df$alpha.code))
@@ -89,7 +90,7 @@ view(srm)
  
 # ok I think this looks good.
 
-# now need to export hrcd data
+# now filter hrcd data for export
 
 hrcd.d <- hrcd %>%
   filter(Station %in% completeness2$code,

@@ -34,14 +34,15 @@ cod <- read_csv("data/c_analysis_data/nbp_circ_codes.csv")
 
 #### filter out sp. records and hybrids, filter out incomplete years 1996, 2020, and 2024
 dres <- dat %>%
-  filter(!str_detect(species, pattern = " sp."), !str_detect(species, pattern = " sp."),
+  filter(!str_detect(species, pattern = " sp.| x "),
          !year %in% c(1996, 2020, 2024))
 
 ## create a diversity / abundance data frame for each station for each year
 
 ddiv <- dres %>%
   group_by(year, park, loop, station) %>%
-  summarise(S = n_distinct(species), nsurv = n_distinct(survey_id), maps = sum(seen, heard, fly) / nsurv)
+  summarise(S = n_distinct(species), nsurv = n_distinct(survey_id), maps = sum(seen, heard, fly) / nsurv) %>%
+  ungroup()
 
 
 ## join diversity data frame with gsp phase table
@@ -80,10 +81,22 @@ focal.parks <- c("Discovery Park", "Magnuson Park", "Carkeek Park", "Golden Gard
 
 ### AOV and Tukey test
 
-d <- filter(ddiv, park %in% focal.parks, phase_sum %in% cphase, year == 2023)
+d <- filter(ddiv, park %in% focal.parks, phase_sum %in% cphase, year == 2022) %>%
+  mutate(phase = factor(case_when(phase_sum == "0...." ~ 0,
+                           phase_sum == ".1..." ~ 1,
+                           phase_sum == "..2.." ~ 2,
+                           phase_sum == "...3." ~ 3,
+                           phase_sum == "....4" ~ 4), levels = c(0, 1, 2, 3, 4)))
 
-phase_aov <- aov(S ~ phase_sum, data = d) 
+
+phase_aov <- aov(S ~ phase, data = d) 
 TukeyHSD(phase_aov)
+
+ggplot(d, aes(x = phase, y = S)) + 
+  geom_boxplot() +
+  geom_jitter() +
+  labs(title = "Distribution of species richness in 2022", subtitle = "At stations proximate to GSP restoration sites by phase") +
+  theme_bcs()
 
 summary(d)
 
@@ -127,8 +140,13 @@ prop.mixed <- lmer(S ~ prop_4 + (1 | park), data = filter(ddiv, year == 2019))
 summary(prop.mixed)
 
 
-ggplot(filter(d, year == 2022), aes(x = prop_4, y = S)) +
-  geom_point(na.rm = TRUE) +
-  geom_smooth(method = "lm", se = FALSE, na.rm = TRUE)
+ggplot(filter(d, year == 2022), aes(x = phase, y = S)) +
+  geom_boxplot()
 
+
+unique(d$phase)
+
+dat %>% filter(park == "Magnuson Park") %>%
+  group_by(year) %>%
+  summarise(S = n_distinct(species))
 
