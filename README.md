@@ -9,17 +9,21 @@ a_packaged
 
 b_analysis
 	Raw data used for spatial analysis by Nick
-\_ b1_customized
+ 
+----> b1_customized
 		Spatial data customized by Nick that is specifically tailored/currently used for analysis w/ NBP data.
-	\_ InUse
-		\_ HRCD_NAD83_Overlapping (Land use change overlapping w/ count cirlces)
-		\_ LFtracts_NAD83 (Lake Forest Park tracts)
-		\_ NBP_countCircles_50m
-		\_ NBP_countCircles_Points_NAD83 (Count circle centerpoints)
-		\_ SEA_tracts_NAD83 (Seattle tracts)
-		\_ SEA_blocks_LivingAtlas (Seattle Census blocks from ArcGIS Living Atlas)
-		\_ SEA_traffic (shapefile traffic data by tract and by block group)
-	\_ Land Use (HRCD) Clipped (ALL land use change recorded within Seattle and LFP)
+  
+	----> InUse
+ 
+		----> HRCD_NAD83_Overlapping (Land use change overlapping w/ count cirlces)
+		----> LFtracts_NAD83 (Lake Forest Park tracts)
+		----> NBP_countCircles_50m
+		----> NBP_countCircles_Points_NAD83 (Count circle centerpoints)
+		----> SEA_tracts_NAD83 (Seattle tracts)
+		----> SEA_blocks_LivingAtlas (Seattle Census blocks from ArcGIS Living Atlas)
+		----> SEA_traffic (shapefile traffic data by tract and by block group)
+  
+	----> Land Use (HRCD) Clipped (ALL land use change recorded within Seattle and LFP)
 		
 
 # Analyzing long-term bird point count data from Seattle, WA
