@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <title>Parks in King County</title>
+                <edition>One</edition>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>King County</publish>
+                </pubinfo>
+                <othercit>None</othercit>
+                <onlink>https://kingcounty.maps.arcgis.com/home/item.html?id=ad430dc31f9447268bf17a6dfab8475a</onlink>
+                <onlink>https://kingcounty.maps.arcgis.com/home/item.html?id=9260e497df544ee9971ca83ca6f77670</onlink>
+                <onlink>http://www5.kingcounty.gov/sdc/Metadata.aspx?Layer=park</onlink>
+                <onlink>http://www5.kingcounty.gov/sdc/addl_doc/KCGISCenterTermsAndConditions.pdf</onlink>
+                <onlink>http://www5.kingcounty.gov/sdc/addl_doc/KCGISCenterHelpUsingKCOpenData.pdf</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Public parks within King County. City parks and other agency parks may not be complete.</abstract>
+            <purpose>Public parks within King County. City parks and other agency parks may not be complete.</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20150306</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>publication date</current>
+        </timeperd>
+        <status>
+            <progress>In work</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-122.541901</westbc>
+                <eastbc>-121.063423</eastbc>
+                <northbc>47.787136</northbc>
+                <southbc>47.135131</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>recreation_OpenData</themekey>
+                <themekey>recreation</themekey>
+                <themekey>parks</themekey>
+                <themekey>recreatn</themekey>
+                <themekey>open space</themekey>
+                <themekey>natural areas</themekey>
+                <themekey>sports</themekey>
+                <themekey>baseball</themekey>
+                <themekey>park_area</themekey>
+                <themekey>kingcounty_opendata</themekey>
+            </theme>
+            <place>
+                <placekt>Not applicable</placekt>
+                <placekey>Pacific NW</placekey>
+                <placekey>Washington state</placekey>
+                <placekey>King County</placekey>
+                <placekey>WA</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>King County data are made available with the understanding that they shall be used exclusively by the obtainer or his/her authorized agents. Digital products may not be reproduced or redistributed in any form or by any means without the express written authorization of King County.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>King County Dept. of Natural Resources and Parks</cntorg>
+                    <cntper>Gavin Gray</cntper>
+                </cntorgp>
+                <cntpos>GIS Analyst</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>201 S Jackson St, Suite 700</address>
+                    <city>Seattle</city>
+                    <state>WA</state>
+                    <postal>98104</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>206-477-4416</cntvoice>
+                <cntemail>firstname.lastname@kingcounty.gov</cntemail>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>King County Dept. of Natural Resources and Parks</cntorg>
+                    <cntper>Gavin Gray</cntper>
+                </cntorgp>
+                <cntpos>GIS Analyst</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>201 S Jackson St, Suite 700</address>
+                    <city>Seattle</city>
+                    <state>WA</state>
+                    <postal>98104</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>206-477-4416</cntvoice>
+            </cntinfo>
+        </ptcontac>
+        <browse>
+            <browsen>http://www5.kingcounty.gov/sdc/DataImages/park.jpg</browsen>
+            <browsed>JPG File of layer overlain on base of WA counties or local cities</browsed>
+            <browset>JPG</browset>
+        </browse>
+        <native>Esri ArcGIS 10.1.1.3143</native>
+    </idinfo>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>0</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>PLIBRARY.RECREATN.xxxx1360245</enttypl>
+                <enttypds>ESRI</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature Geometry</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Coordinates defining the features</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>KC_FAC_FID</attrlabl>
+                <attrdef>The unique id for each site from Parks PSAFI database.</attrdef>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>2252</rdommin>
+                        						
+                        <rdommax>5391</rdommax>
+                        						
+                        <attrmres>1</attrmres>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>KCPARKFID</attrlabl>
+                <attrdef>The spatial id for each site.</attrdef>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>2221101</rdommin>
+                        						
+                        <rdommax>13260401</rdommax>
+                        						
+                        <attrmres>1</attrmres>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SITENAME</attrlabl>
+                <attrdef>The name of the site.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>SITETYPE</attrlabl>
+                <attrdef>The type of the site.</attrdef>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>Park Site</edomv>
+                        						
+                        <edomvd>A collection of facilities used for public recreation, providing that the primary facility is not a trail or pool as defined by Trail Site or Pool Site.</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OWNER</attrlabl>
+                <attrdef>The name of the owner agency.</attrdef>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>City Of Algona</edomv>
+                        						
+                        <edomvd>City Of Algona</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OWNERTYPE</attrlabl>
+                <attrdef>The type of the owner agency.</attrdef>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>City</edomv>
+                        						
+                        <edomvd>City</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MANAGER</attrlabl>
+                <attrdef>The name of the manager agency.</attrdef>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>City Of Algona</edomv>
+                        						
+                        <edomvd>City Of Algona</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MANAGETYPE</attrlabl>
+                <attrdef>The type of the manager agency.</attrdef>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>City</edomv>
+                        						
+                        <edomvd>City</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MAINTD_BY</attrlabl>
+                <attrdef>The name of the maintenance agency.</attrdef>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>City Of Algona</edomv>
+                        						
+                        <edomvd>City Of Algona</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MAINTTYPE</attrlabl>
+                <attrdef>The type of the maintenance agency.</attrdef>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>City</edomv>
+                        						
+                        <edomvd>City</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.area</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.len</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>KCGIS Center</cntorg>
+                    <cntper>Cheryl Wilder</cntper>
+                </cntorgp>
+                <cntpos>Data Sales Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>201 S Jackson St, Suite 700</address>
+                    <city>Seattle</city>
+                    <state>WA</state>
+                    <postal>98104</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>206-477-4421111</cntvoice>
+            </cntinfo>
+        </distrib>
+        <resdesc>/plibrary2/recreatn/shapes/polygon/park.shp</resdesc>
+        <distliab>King County disclaims any warranty of use of any digital product or data beyond that for which it was designed.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>ESRI Shapefile</formname>
+                </digtinfo>
+            </digform>
+            <fees>Contact KCGIS Client Services for the cost of reproduction - &lt;http://www.kingcounty.gov/operations/GIS/GISData/GISDataDistribution.aspx&gt;</fees>
+        </stdorder>
+    </distinfo>
+    <metainfo>
+        <metd>20160408</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>King County Dept. of Natural Resources and Parks</cntorg>
+                    <cntper>Gavin Gray</cntper>
+                </cntorgp>
+                <cntpos>GIS Analyst</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>201 S Jackson St, Suite 700</address>
+                    <city>Seattle</city>
+                    <state>WA</state>
+                    <postal>98104</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>206-477-4416</cntvoice>
+                <cntemail>firstname.lastname@kingcounty.gov</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

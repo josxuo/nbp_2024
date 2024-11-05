@@ -1,3 +1,27 @@
+# GIS Analysis Branch
+NBP Spatial Analysis (data/d_spatial) Folder - Readme:
+
+(Specific files listed are completed data; raw data excluded from the file tree for simplicity, but those files are in the repo as well.)
+
+# Relevant Folders in d_spatial
+a_packaged
+	Shapefiles packaged for easy drag-and-drop into GIS software. Includes select parks that have been focused on (as of 5/5/24: Cheasty Greenspace, Discovery Park, Genesee, Washington Park Arboretum)
+
+b_analysis
+	Raw data used for spatial analysis by Nick
+\_ b1_customized
+		Spatial data customized by Nick that is specifically tailored/currently used for analysis w/ NBP data.
+	\_ InUse
+		\_ HRCD_NAD83_Overlapping (Land use change overlapping w/ count cirlces)
+		\_ LFtracts_NAD83 (Lake Forest Park tracts)
+		\_ NBP_countCircles_50m
+		\_ NBP_countCircles_Points_NAD83 (Count circle centerpoints)
+		\_ SEA_tracts_NAD83 (Seattle tracts)
+		\_ SEA_blocks_LivingAtlas (Seattle Census blocks from ArcGIS Living Atlas)
+		\_ SEA_traffic (shapefile traffic data by tract and by block group)
+	\_ Land Use (HRCD) Clipped (ALL land use change recorded within Seattle and LFP)
+		
+
 # Analyzing long-term bird point count data from Seattle, WA
 Analyses of Birds Connect Seattle's [Neighborhood Bird Project Data](https://birdsconnectsea.org/our-work/conservation/urban-conservation/neighborhood-bird-project/)
 
